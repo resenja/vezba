@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- UTF-8 DA BI MOGLA DA SE KORISTI ĆIRILICA -->
+    <!-- UTF-8 da bi mogla da se koristi ćirilica -->
     <meta charset="UTF-8" />
     <title>Ovo je naslov stranice</title>
   </head>
@@ -11,15 +11,21 @@
     <table width="100%">
       <tr>
         <td></td>
+        <!-- align="center" centrira sadrzaj unutar tog elementa (td) -->
         <td align="center">
           <h1>3. БЕОГРАДСКА ГИМНАЗИЈА</h1>
         </td>
-        <td><img width="150" height="150" src="logo.svg" alt="logo skole" /></td>
+        <td>
+          <!-- ovako postavljas sliku koja se nalazi u istom direktorijumu (samo navedes ime slike u src atributu) -->
+          <!-- slike imaju i atribut alt koji sluzi da ako neka slika ne moze da se prikaze umesto nje ce se prikazat i tekst -->
+          <img width="150" height="150" src="logo.svg" alt="logo skole" />
+        </td>
       </tr>
       <tr>
         <td>
           <h2>NAVIGACIJA</h2>
           <ul>
+            <!-- a tag se koristi za linkove, kada kliknes na sadrzaj unutar tog taga odvesce te na adresu navedenu u href atributu -->
             <li><a href="https://www.trecagimnazija.edu.rs/">Početna stranica</a></li>
             <li><a href="https://www.trecagimnazija.edu.rs/istorijat-gimnazije/">Istorijat škole</a></li>
             <li><a href="https://www.trecagimnazija.edu.rs/novosti/za-maturante/">O Učenicima</a></li>
@@ -30,18 +36,29 @@
           <p>У почетку је била мушка гимназија, да би 1929. године почела да прима и ученице.</p>
         </td>
         <td>
-          <a href="https://www.google.com"><img width="150" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="logo google-a" /></a>
+          <!-- a tag funkcionise i na sliku (kada kliknemo na sliku oticicemo na google.com) -->
+          <a href="https://www.google.com">
+            <!-- da bi koristili sliku koja se ne nalazi na racunaru navodimo njenu adresu u src atributu -->
+            <img width="150" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="logo google-a" />
+          </a>
         </td>
       </tr>
       <tr>
         <td>
+          <!-- slika moze a ne mora da sadrzi atribute width i height. Postoje tri slucaja: -->
+          <!-- 1) ako NE postoji ni width ni height slika ce imati originalne dimenzije -->
+          <!-- 2) ako postoji width ILI height slika ce imati navedenu dimenziju, a druga dimenzija ce zadrzati razmeru (npr. kod slike dvorista naveo sam samo height="150", a originalna visina je bila 1700 => sirina ce biti width="225" automatski) -->
+          <!-- 3) ako postoji width I height slika ce promeniti svoje dimenzije -->
           <img width="150" height="150" src="https://www.trecagimnazija.edu.rs/wp-content/uploads/2020/11/DSCF0004-e1605628758643.jpg" alt="ulaz skole" />
           <img height="150" src="https://www.trecagimnazija.edu.rs/wp-content/uploads/2020/11/gimnazija-024-scaled.jpg" alt="dvoriste" />
         </td>
         <td align="center">
           <a href="https://www.resenja.github.io">web master</a>
         </td>
-        <td><video height="150" controls src="dan_skole.mp4"></video></td>
+        <td>
+          <!-- video se navodi slicno kao i slika, mozemo i dodati opcioni atribut "controls" koji dodaje kontrole videu (play/pause itd) -->
+          <video height="150" controls src="dan_skole.mp4"></video>
+        </td>
       </tr>
     </table>
   </body>
